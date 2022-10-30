@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous">    
+  </script>
+    <title>Sneakers</title>
+</head>
+
+<body>
+  <div>
+    <!--PROMOTION-->
+    <aside class="promotion">
+      <div class="promo-list w-100">
+        <ul id="promoul">            
+        </ul> 
+      </div>
+    </aside>
+
+    <!--HEADER-->
+    <header>
+      <!--NAVBAR-->
+      <nav class="nav_main">
+        <!--NAVBAR MENU-->
+        <div class="nav_menu">
+          <a href="/">
+            <img src="../assets/img/dark_logo.png" alt="dark_logo">
+          </a>
+          <ul>
+            <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
+            <!-- <li><a href="#" class="flexitem">Mujer <i class="ri-arrow-drop-down-line"></i></a></li> -->
+            <li> <a href="./pages/productos.html">Productos</a></li>
+            <li> <a href="./pages/nosotros.html">Nosotros</a></li>
+            <li> <a href="./pages/ofertas.html">Ofertas</a></li>
+            <li></li>
+          </ul>
+        </div>
+        <!--NAVBAR OPTIONS-->
+        <div class="nav_options">
+          <!--Search-->
+          <div class="search">
+            <button><i class="ri-search-line"></i></button>
+            <input type="text" placeholder="Buscar..." />
+          </div>
+          <!--Shopping Cart-->
+          <button class="cart relative">
+            <span id="count-prod" class="absolute px-1.5 left-3 -top-2 bg-red-500 text-xs rounded-full">0</span>
+              <i onclick="showCart(this)" class="ri-shopping-cart-2-fill"></i>            
+          </button>
+          <!--Favorites-->
+          <button class="favorites"><i class="ri-heart-fill"></i></button>
+          <!--Theme-->
+          <button class="theme">
+            <!--Dark-->
+            <i class="ri-moon-fill"></i>
+            <!--Light-->
+            <!--<i class="ri-sun-fill"></i>-->
+          </button>
+          <!--Menu-->
+          <button class="menu">
+            <i class="ri-menu-3-fill"></i>
+          </button>
+          <button id="buttonlogin" class="user" >
+            <!-- <a href="./pages/loginPage/login.html"></a> -->
+            <i class="ri-user-fill"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+
+    
+
+    
+    <!--MAIN-->
+    <main>
+      <!--BRANDS-->
+      <section class="brands">
+        <div class="slider_brands">
+          <div class="slide_track">
+            <div class="brand_slide">
+              <img src="assets/img/marcas/adidas.png" alt="brand_adidas">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/nike.png" alt="brand_nike">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/converse.png" alt="brand_converse">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/vans.png" alt="brand_vans">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/umbro.png" alt="brand_umbro">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/dc.png" alt="brand_dc">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/everlast.png" alt="brand_everlast">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/puma.png" alt="brand_puma">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/rebook.png" alt="brand_rebook">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/adidas.png" alt="brand_adidas">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/nike.png" alt="brand_nike">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/converse.png" alt="brand_converse">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/vans.png" alt="brand_vans">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/umbro.png" alt="brand_umbro">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/dc.png" alt="brand_dc">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/everlast.png" alt="brand_everlast">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/puma.png" alt="brand_puma">
+            </div>
+            <div class="brand_slide">
+              <img src="assets/img/marcas/rebook.png" alt="brand_rebook">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="cart-products" id="products-id">
+        <p class="close-btn" onclick="closeBtn()">X</p>
+        <h3 style="margin-top: 20px; margin-bottom: 20px;"> Mi carrito</h3>
+        <div class="card-items">            
+        </div>
+        <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
+        <button type="submit">Pagar</button>
+      </div>
+
+      <!--BANNER-->
+      <section class="banner">
+        <div class="banner_container">
+          <!-- BANNER TRANSITIONS 1-->
+          <div class="vim">
+            <div class="transitions_1">
+              <img class="banner_1" src="./assets/img/banner_background_2.png" alt="b_one">
+              <div class="texting_1">
+                <h1>
+                  Todos los productos disponibles para tu outfit!!
+                </h1>
+              </div>
+              <div class="banner_logo">
+                <img src="assets/img/nofondo_dark.png" alt="logo_banner">
+              </div>
+            </div>
+          </div>
+          <!-- BANNER TRANSITIONS 2-->
+          <div class="vim">
+            <div class="transitions_2">
+              <div class="texting_2">
+                <div>
+                  <h1>Flexibilidad</h1>
+                  <p>Calidad para cada tipo de gusto</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nemo blanditiis repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
+                  </p>
+                  <button>Nuestras categorías</button>
+                </div>
+              </div>
+              <div class="banner_2">
+                <img src="./assets/img/zapatilla.png" alt="b_two" />
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <!-- BANNER TRANSITIONS 3-->
+          <div class="vim">
+            <div class="transitions_3">
+              <div class="texting_3">
+                <h1>La temporada black and white ya esta aquí</h1>
+              </div>
+              <img src="./assets/img/banner_background_1.png" alt="zapa">
+            </div>
+          </div>
+          <!-- BANNER TRANSITIONS 4-->
+          <div class="vim">
+            <div class="transitions_4">
+              <div class="banner_4">
+                <img src="./assets/img/banner_logos.png" alt="zapa">
+              </div>
+              <div class="texting_4">
+                <div>
+                  <h1>Rentabilidad</h1>
+                  <p>Las mejores marcas a tu disposición</p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Nemo
+                    blanditiis
+                    repudiandae quos pariatur iste alias quo quibusdam quia, asperiores eum.
+                  </p>
+                  <button>Descubre más</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--CONTROLS-->
+          <div class="controls">
+            <button type="button" class="prev" onclick="plusSlides(-1)"><i class="ri-arrow-left-line"></i></button>
+            <div class="doting">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+            <button type="button" class="next" onclick="plusSlides(1)"><i class="ri-arrow-right-line"></i></button>
+          </div>
+        </div>
+      </section>
+
+      <!--CATEGORIES-->
+      <section class="p-10 flex justify-center">
+        <div class="max-w-[1280px] w-full">
+          <h1 class="text-4xl font-bold">Nuestras categorías</h1>
+          <!--PRODUCTS CATEGORIES-->
+          <div class="mt-10 grid grid-cols-3 gap-4">
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/categories/cat_hombre.png" alt="cat_hombre">
+              <p class="mt-2 text-xl font-bold">Hombre</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/categories/cat_mujer.png" alt="cat_mujer">
+              <p class="mt-2 text-xl font-bold">Mujer</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/categories/cat_nino.png" alt="cat_nino">
+              <p class="mt-2 text-xl font-bold">Niño</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--COLLECTIONS-->
+      <section class="p-10 flex justify-center">
+        <div class="max-w-[1280px] w-full">
+          <h1 class="text-4xl font-bold">Nuestras colecciones</h1>
+          <!--PRODUCTS COLLECTIONS-->
+          <div class="mt-10 grid grid-cols-3 gap-4">
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/collections/col_soccer.png" alt="col_soccer">
+              <p class="mt-2 text-xl font-bold">Zapatillas de fútbol</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/collections/col_running.png" alt="col_running">
+              <p class="mt-2 text-xl font-bold">Zapatillas de running</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/collections/col_mountain.png" alt="col_mountain">
+              <p class="mt-2 text-xl font-bold">Zapatillas montañeras</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/collections/col_skate.png" alt="col_skate">
+              <p class="mt-2 text-xl font-bold">Zapatillas de skateboarding</p>
+            </div>
+            <div>
+              <img class="rounded-lg brightness-75 hover:brightness-100 cursor-pointer"
+                src="assets/img/collections/col_finaledition.png" alt="col_soccer">
+              <p class="mt-2 text-xl font-bold">Zapatillas exclusivas</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Nosotros</h4>
+            <ul>
+              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="#">nuestros servicios</a></li>
+              <li><a href="#">politicas de privacidad</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">envios</a></li>
+              <li><a href="#">devoluciones</a></li>
+              <li><a href="#">opciones de pago</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Tienda online</h4>
+            <ul>
+              <li><a href="#">Ver</a></li>
+              <li><a href="#">carrito</a></li>
+              <li><a href="#">zapatillas</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>siguenos</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/snks___shop/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="px-10 py-5 flex justify-center">
+      <div class="max-w-[1480px] w-full flex justify-between">
+        <div class="flex gap-5">
+          <p>&copy; 2022 Sneakers,</p>
+          <p>Todos los derechos reservados</p>
+        </div>
+        <div class="flex gap-5">
+          <p><a class="hover:underline hover:font-semibold" href="#">Términos de privacidad</a> (Actualizada 10/2022)
+          </p>
+          <p><a class="hover:underline hover:font-semibold" href="#">Mapa de sitio</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="login">
+    <div>
+      <h3>Login</h3>
+    </div>
+    <div class="form-login">
+      <form action="submit" id="form-box">
+        <label for="">Usuario</label>
+        <input type="text" placeholder="nombre usuario" required>
+        <br>
+        <label for="">Clave</label>
+        <input type="password" placeholder="clave" required>
+        <li>
+          <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
+        </li>
+        <br>
+        <input type="submit" value="ingresar">
+      </form>
+    </div>
+
+  <script src="script.js"></script>
+  
+  <script type="text/javascript" >
+    
+    $("#buttonlogin").click(function(){
+      $("#login").toggle(function(e) {
+          if ($(this).is(":visible")) {
+              $("#login").show();
+              $("#buttonlogin").css('color', 'grey');
+          }
+          else {
+              $("#login").hide(); 
+              $("#buttonlogin").css('color','white');
+          };
+      });
+    });
+
+  </script>
+  <script src="./javascript/promotion.js"></script>
+</body>
+
+</html>

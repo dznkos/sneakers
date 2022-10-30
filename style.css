@@ -1,0 +1,48 @@
+/*CSS Structure*/
+
+/*Global Styles*/
+@import url("./styles/globals.css");
+
+/*Header Styles*/
+@import url("./styles/header.css");
+
+/*Brand Styles*/
+@import url("./styles/brands.css");
+
+/*Banner Styles*/
+@import url("./styles/banner.css");
+
+/*Footer Styles*/
+@import url("./styles/footer.css");
+
+/*Login */
+@import url("./styles/login.css");
+
+/*Nosotros*/
+@import url("./styles/nosotros.css");
+
+/*Productos */
+@import url("./styles/productos.css");
+
+/*NavBar*/
+.flexitem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flexcenter {
+  display: flex;
+  justify-content: center;
+}
+
+/*Bootstrap*/
+.hovereffect a:hover {
+  background-color: grey;
+  zoom: 1;
+}
+
+.hovereffect:hover img {
+  transform: scale(1.05);
+  background-color: grey;
+}
