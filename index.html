@@ -35,8 +35,8 @@
       <nav class="nav_main">
         <!--NAVBAR MENU-->
         <div class="nav_menu">
-          <a href="/">
-            <img src="../assets/img/dark_logo.png" alt="dark_logo">
+          <a href="index.html">
+            <img src="./assets/img/dark_logo.png" alt="dark_logo">
           </a>
           <ul>
             <!-- <li><a href="#" class="flexitem">Hombre <i class="ri-arrow-drop-down-line"></i></a></li> -->
@@ -67,10 +67,6 @@
             <i class="ri-moon-fill"></i>
             <!--Light-->
             <!--<i class="ri-sun-fill"></i>-->
-          </button>
-          <!--Menu-->
-          <button class="menu">
-            <i class="ri-menu-3-fill"></i>
           </button>
           <button id="buttonlogin" class="user" >
             <!-- <a href="./pages/loginPage/login.html"></a> -->
@@ -154,7 +150,7 @@
         <div class="card-items">            
         </div>
         <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
-        <button type="submit">Pagar</button>
+        <button type="submit"><a href="pages/infopago/infopago.html">Pagar</a></button>
       </div>
 
       <!--BANNER-->
@@ -305,18 +301,16 @@
           <div class="footer-col">
             <h4>Nosotros</h4>
             <ul>
-              <li><a href="#">Sobre nosotros</a></li>
+              <li><a href="pages/nosotros.html">Sobre nosotros</a></li>
               <li><a href="#">nuestros servicios</a></li>
-              <li><a href="#">politicas de privacidad</a></li>
+              <li><a href="pages/TyC.html">Terminos y Condiciones</a></li>
             </ul>
           </div>
           <div class="footer-col">
             <h4>get help</h4>
             <ul>
-              <li><a href="#">FAQ</a></li>
-              <li><a href="#">envios</a></li>
-              <li><a href="#">devoluciones</a></li>
-              <li><a href="#">opciones de pago</a></li>
+              <li><a href="pages/FAQs.html">FAQ</a></li>
+              <li><a href="#">Ayuda</a></li>
             </ul>
           </div>
           <div class="footer-col">
@@ -330,7 +324,7 @@
           <div class="footer-col">
             <h4>siguenos</h4>
             <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/people/Sneakers/100087382202607/"><i class="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/snks___shop/"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
@@ -344,9 +338,9 @@
           <p>Todos los derechos reservados</p>
         </div>
         <div class="flex gap-5">
-          <p><a class="hover:underline hover:font-semibold" href="#">Términos de privacidad</a> (Actualizada 10/2022)
+          <p><a href="pages/TyC.html" class="hover:underline hover:font-semibold" href="#">Términos de privacidad</a> (Actualizada 10/2022)
           </p>
-          <p><a class="hover:underline hover:font-semibold" href="#">Mapa de sitio</a></p>
+          <p><a class="hover:underline hover:font-semibold" href="https://www.google.com/maps/place/P%C3%ADzza+Hut/@-12.0830598,-76.9297471,19z/data=!4m13!1m7!3m6!1s0x9105c72728f1e9c3:0xe561ad9645daa02c!2sLa+Molina!3b1!8m2!3d-12.0820196!4d-76.928234!3m4!1s0x9105c728719ac6e7:0xa352481d72ee0993!8m2!3d-12.0827634!4d-76.9298465">Mapa de sitio</a></p>
         </div>
       </div>
     </div>
@@ -367,7 +361,7 @@
           <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
         </li>
         <br>
-        <input type="submit" value="ingresar">
+        <input id="btnlogin" type="submit" value="ingresar">
       </form>
     </div>
 
@@ -375,18 +369,25 @@
   
   <script type="text/javascript" >
     
-    $("#buttonlogin").click(function(){
+   $("#buttonlogin").click(function(){
       $("#login").toggle(function(e) {
           if ($(this).is(":visible")) {
+              $("#login").css('transform', 'translateX(-350px)')
+              $("#login").css('transition', '3s')
               $("#login").show();
               $("#buttonlogin").css('color', 'grey');
           }
           else {
-              $("#login").hide(); 
+              $("#login").hide();               
               $("#buttonlogin").css('color','white');
           };
       });
     });
+    
+    $("#btnlogin").click(function(){
+      $("#login").hide();
+      $("#buttonlogin").css('color','white');
+    })   
 
   </script>
   <script src="./javascript/promotion.js"></script>

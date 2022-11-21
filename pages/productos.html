@@ -35,7 +35,7 @@
       <nav class="nav_main">
         <!--NAVBAR MENU-->
         <div class="nav_menu">
-          <a href="/">
+          <a href="../index.html">
             <img src="../assets/img/dark_logo.png" alt="dark_logo">
           </a>
           <ul>
@@ -154,8 +154,16 @@
           <h3 style="margin-top: 20px; margin-bottom: 20px;"> Mi carrito</h3>
           <div class="card-items">            
           </div>
-          <h2 style="margin-top: 20px; margin-bottom: 20px;">Total: S/.<strong class="price-total">0</strong></h2>
-          <button type="submit">Pagar</button>
+          <h2>Total: S/.<strong class="price-total" id="price-total">0</strong></h2>
+          <script>
+            function linkinfopago(){
+              let precio = Number(document.getElementById("price-total").outerText);
+              window.location.href="https://jorgitoayala.github.io/Sneakers/pages/infopago/infopago.html?precio="+precio
+            }
+          </script>
+          
+          <button type="submit" onclick="linkinfopago()">Pagar</button>
+          
         </div>
 
       </div>
@@ -163,10 +171,11 @@
   </header>
   <!--HEADER2-->
   <header class="h_zapatillas">
-    <h1>ZAPATILLAS ADIDAS HOMBRE</h1>
+    <h1>ZAPATILLAS</h1>
   </header>
   <!--PRODUCTS-->
   <div class="container-items">
+
     <div class="item">
       <div class="info-product">
         <figure>
@@ -178,6 +187,8 @@
         <a href="" data-id="1" class="btn-add-cart">Añadir al carrito</a>
       </div>
     </div>
+
+
     <div class="item">
       <div class="info-product">
         <figure>
@@ -220,6 +231,90 @@
         <!--<p class="price"><span>S/.</span>199</p>-->
         <b>S/.<b class="price">429</b></b>
         <a href="" data-id="5" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img
+            src="../assets/img/productos/NIKE/NIKE MEN/DOWNSHIFTER 12 BLACK/deportivo-nike-new-downshifter-total (1).jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">DOWNSHIFTER 12 BLACK</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">199</b></b>
+        <a href="" data-id="6" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/NIKE/NIKE MEN/DOWNSHIFTER 12/deportivo-nike-downs-12-men (1).jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">DOWNSHIFTER 12</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">299</b></b>
+        <a href="" data-id="7" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/NIKE/NIKE MEN/MEN REVOLUTION 5/deportivo-nike-revoluti5-men (1).jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">MEN REVOLUTION 5</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">259</b></b>
+        <a href="" data-id="8" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/NIKE/NIKE MEN/REVOLUTION 5 21/deportivo-nike-uni-total-negro.jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">REVOLUTION 5 21</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">329</b></b>
+        <a href="" data-id="9" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/NIKE/NIKE WOMEN/DEPORTIVA DOWSNHIFTER 10/deportiva-nike-women-down-21.jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">DEPORTIVA DOWSNHIFTER 10</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">429</b></b>
+        <a href="" data-id="10" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS NIÑOS/SWIFT RUN SHOES/SWIFT RUN SHOES.jpg" alt="producto">
+        </figure>
+        <h2 class="title">SWIFT RUN SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">249</b></b>
+        <a href="" data-id="11" class="btn-add-cart">Añadir al carrito</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="info-product">
+        <figure>
+          <img src="../assets/img/productos/ADIDAS/ADIDAS NIÑOS/ULTRABOOST 5.0 DNA SHOES/ULTRABOOST 5.0 DNA SHOES.jpg"
+            alt="producto">
+        </figure>
+        <h2 class="title">ULTRABOOST 5.0 DNA SHOES</h2>
+        <!--<p class="price"><span>S/.</span>199</p>-->
+        <b>S/.<b class="price">329</b></b>
+        <a href="" data-id="12" class="btn-add-cart">Añadir al carrito</a>
       </div>
     </div>
   </div>
@@ -295,7 +390,7 @@
           <input type="checkbox" value="Remember me"><label for="Remember me" id="remember">Remember me</label>
         </li>
         <br>
-        <input type="submit" value="ingresar">
+        <input id="btnlogin" type="submit" value="ingresar">
       </form>
     </div>
 
@@ -315,6 +410,10 @@
           };
       });
     });
+    $("#btnlogin").click(function(){
+      $("#login").hide();
+      $("#buttonlogin").css('color','white');
+    })   
 
   </script>
   <script src="../javascript/promotion.js"></script>
